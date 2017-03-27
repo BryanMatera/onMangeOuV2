@@ -10,9 +10,11 @@
 <body>
 
   <div class="content-results">
-        
-    <h2>Restaurants correspondants à votre recherche</h2>
-            
+
+    <h2>Restaurants correspondants à votre recherche
+      <a href="/onMangeOuV2/public/recherche">Retour à l'accueil</a>
+    </h2>
+
         @foreach($restaurants as $restaurant)
         <section class="restaurant">
             <h3>{{$restaurant->nom}}</h3>
