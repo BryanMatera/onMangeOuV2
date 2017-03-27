@@ -1,0 +1,67 @@
+/*Style pour toutes les pages SAUF ACCUEIL*/
+body {
+    background-image: url(images/fond2-web.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #3F3632;
+}
+
+.principal-nav {
+    background-color: rgba(63,54,50,0.9);
+    box-shadow: 0px 4px 10px black;
+    color: white;
+    display: flex;
+}
+
+.principal-nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.principal-nav li {
+    padding: 0 20px 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal-nav .connexion {
+    background-color: #FFAC06;
+}
+
+.principal-nav a {
+    color: white;
+}
+
+.principal-nav .inscription {
+    background-color: #3F3632;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 30px;
+    padding: 0;
+}
+
+li.logo-title {
+    font-family: 'Times new roman', serif;
+    padding: 0;
+}
+
+@media all and (max-width: 480px){
+  .principal-nav li {
+      padding: 0 10px 0 10px;
+  }
+}

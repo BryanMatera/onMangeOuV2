@@ -1,0 +1,49 @@
+.content-results {
+  width: 70%;
+  background-color: rgba(255,255,255,0.8);
+  margin: auto;
+}
+
+h2 {
+  background-color: #FFAC06;
+  padding: 10px 0 10px 10px;
+  color: white;
+}
+
+h3 {
+  color: #C1272D;
+}
+
+.restaurant {
+  padding: 20px;
+  border-bottom: 1px dotted #3F3632;
+  width: 92%;
+  margin: auto;
+}
+
+.description {
+  width: 100%;
+
+}
+
+.bas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.droite{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.droite div {
+  margin-top: 10px;
+  background-color: #3F3632;
+  padding: 5px 15px 5px 15px;
+}
+
+.droite div a {
+  color: white;
+}

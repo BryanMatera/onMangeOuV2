@@ -1,0 +1,96 @@
+.content-search {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.content-search h1 {
+  font-family: 'Times new roman', serif;
+  color: white;
+  margin-bottom: 50px;
+  font-size: 70px;
+  text-shadow: 3px 3px 5px black;
+}
+
+.search {
+  width: 800px;
+}
+
+.search form {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.champs {
+  width: 100%;
+  padding: 40px 0 40px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+input, select {
+  width: 200px;
+  padding: 3px;
+  color: grey;
+  border: none;
+}
+
+select option {
+  color: grey;
+}
+
+.button {
+    margin-top: 50px;
+    background-color: #FFAC06;
+    padding: 10px 0 10px 0;
+    border: none;
+    color: white;
+    width: 150px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.messages-erreur {
+  color: red;
+  font-size: 25px;
+  margin-top: -30px;
+}
+
+@media all and (max-width: 992px){
+  .content-search {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .search {
+    width: 600px;
+  }
+  .content-search h1 {
+    font-size: 50px;
+  }
+  input, select {
+    width: 150px;
+  }
+}
+
+@media all and (max-width: 768px){
+  .content-search {
+    text-align: center;
+  }
+  .content-search h1 {
+    font-size: 40px;
+  }
+  .champs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input, select {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+}

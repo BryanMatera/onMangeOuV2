@@ -1,0 +1,95 @@
+/* Style de la page d'accueil */
+body {
+    background-image: url(images/fond1-web.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #3F3632;
+}
+
+.principal-nav {
+    background-color: rgba(63,54,50,0.9);
+    box-shadow: 0px 4px 10px black;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.principal-nav ul {
+    padding: 0;
+    display: flex;
+}
+
+.principal-nav li {
+    padding: 10px;
+}
+
+.principal-nav .connexion {
+    background-color: #FFAC06;
+}
+
+.principal-nav a {
+    color: white;
+}
+
+.principal-nav .inscription {
+    background-color: #3F3632;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 15%;
+}
+
+.center-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center-right h1 {
+    font-family: 'Times new roman', serif;
+    font-size: 60px;
+    color: white;
+}
+
+.center-right .button {
+    background-color: #FFAC06;
+    margin-top: 20px;;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px black;
+}
+
+.center-right .button a {
+    color: white;    
+    font-size: 20px;
+}
+
+@media all and (max-width: 1200px){
+    .center {
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 992px){
+
+}
+
+@media all and (max-width: 768px){
+    .center {
+        flex-direction: column;
+        margin-top: 5%;
+        margin-bottom: 50px;
+    }
+    .center-right h1 {
+        font-size: 40px;
+    }
+}
+
+@media all and (max-width: 480px){
+
+}
