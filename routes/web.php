@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('recherche', 'rechercheController@selectionCategorie');
+
 Route::post('traitement', 'rechercheController@resultatFormulaire');
 
-Route::get('resultats/{id}/{codeP}',['as'=>'resultats','uses'=>'rechercheController@restoParCategorieEtCP']);
+Route::get('resultats/{id}/{codeP}/{idH}',['as'=>'resultats','uses'=>'rechercheController@restoParCategorieEtCP']);
 
-Route::get('resultats-categorie/{id}',['as'=>'resultats-categorie','uses'=>'rechercheController@restoParCategorie']);
+Route::get('resultats-categorie/{id}/{idH}',['as'=>'resultats-categorie','uses'=>'rechercheController@restoParCategorie']);

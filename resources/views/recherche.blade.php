@@ -34,7 +34,14 @@
                 </select>
                 <!-- {!! $errors->first('type', '<small class="help-block">:message</small>') !!} -->
 
-                <input type="text" name="commune" placeholder="Code postal...">
+                <input type="number" name="commune" placeholder="Code postal...">
+                
+                <select type="text" name="horaire">
+                @foreach($horaires as $horaire)
+                  <option value="{{$horaire->id_horaire}}">{{$horaire->jour}}</option>
+                 @endforeach
+                </select>
+                <!-- {!! $errors->first('type', '<small class="help-block">:message</small>') !!} -->
 
                 <input type="text" name="departement" value="71" hidden>
 
