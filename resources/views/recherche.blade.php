@@ -18,7 +18,8 @@
         </nav>
 
         <div class="content-search">
-          <h1>Recherchez votre restaurant</h1>
+          <h1>Recherchez votre restaurant<br>
+          en Saône-et-Loire</h1>
 
           <section class="search">
             <form method="POST" action="traitement">
@@ -35,7 +36,7 @@
                 <!-- {!! $errors->first('type', '<small class="help-block">:message</small>') !!} -->
 
                 <input type="number" name="commune" placeholder="Code postal...">
-                
+
                 <select type="text" name="horaire">
                 @foreach($horaires as $horaire)
                   <option value="{{$horaire->id_horaire}}">{{$horaire->jour}}</option>
@@ -45,7 +46,7 @@
 
                 <input type="text" name="departement" value="71" hidden>
 
-                
+
 
               </div>
               <div class="messages-erreur">

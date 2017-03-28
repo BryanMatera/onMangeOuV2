@@ -35,15 +35,8 @@
                   <div class="longitude" style="display:none">
                   {{$restaurant->longitude}}
                   </div>
-
-
-
                 </p>
               </div>
-
-
-
-
 
               <div class="droite">
                 <p>Type de cuisine :

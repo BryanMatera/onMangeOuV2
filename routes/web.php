@@ -22,3 +22,5 @@ Route::post('traitement', 'rechercheController@resultatFormulaire');
 Route::get('resultats/{id}/{codeP}/{idH}',['as'=>'resultats','uses'=>'rechercheController@restoParCategorieEtCP']);
 
 Route::get('resultats-categorie/{id}/{idH}',['as'=>'resultats-categorie','uses'=>'rechercheController@restoParCategorie']);
+
+Route::get('no-resultat', 'rechercheController@restoParCategorie');

@@ -59,3 +59,67 @@ h3 {
 .droite div a {
   color: white;
 }
+
+.content-no-result {
+  width: 100%;
+  margin-top: 75px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-result-img {
+  width: 500px;
+  height: 500px;
+  background-image: url(images/chef.png);
+  background-size: cover;
+}
+
+.no-result-txt {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-no-result h6 {
+  font-size: 40px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.content-no-result p {
+  font-size: 20px;
+  color: white;
+}
+
+.button {
+  margin-top: 30px;
+    background-color: #FFAC06;
+    padding: 10px 0 10px 0;
+    border: none;
+    color: white;
+    width: 150px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+@media all and (max-width: 1200px){
+  body {
+    background: none;
+    background-color:#3F3632;
+  }
+  .no-result-img {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media all and (max-width: 768px){
+  .no-result-img {
+    width: 300px;
+    height: 300px;
+  }
+}

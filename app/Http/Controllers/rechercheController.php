@@ -42,28 +42,31 @@ class rechercheController extends Controller
         $horaire = new Horaire;
         $horaires = $horaire::where('id_horaire',$idH)->get();
         $categorie = new Categorie;
-    	$categories = $categorie::where('id_categorie', $id)->get();
-    	$restaurant = new Restaurant;
+    	  $categories = $categorie::where('id_categorie', $id)->get();
+    	  $restaurant = new Restaurant;
 
-      	$restaurants = $restaurant::       join('categories','restaurants.id_categorie','=','categories.id_categorie')
+      	$restaurants = $restaurant::
+        join('categories','restaurants.id_categorie','=','categories.id_categorie')
         ->join('ouvrir','ouvrir.id_restaurant','=','restaurants.id_restaurant')
       	->select('restaurants.*','ouvrir.id_horaire')
       	->where('categories.id_categorie',$id)
         ->where('ouvrir.id_horaire',$idH)
       	->get();
-        
-        /*->where('horaires.id_horaire',$idH)*/
 
-
-        return view('resultats', array("restaurants"=>$restaurants, "categories"=>$categories, "horaires" => $horaires));
+        if (count($restaurants)) {
+          return view('resultats', array("restaurants"=>$restaurants, "categories"=>$categories, "horaires" => $horaires));
+        }
+        else {
+          return view('no-resultat');
+        }
     }
 
     public function restoParCategorieEtCP($id, $codeP, $idH){
         $horaire = new Horaire;
         $horaires = $horaire::where('id_horaire',$idH)->get();
         $categorie = new Categorie;
-    	$categories = $categorie::where('id_categorie', $id)->get();
-    	$restaurant = new Restaurant;
+    	  $categories = $categorie::where('id_categorie', $id)->get();
+        $restaurant = new Restaurant;
 
       	$restaurants = $restaurant::
       	join('categories','restaurants.id_categorie','=','categories.id_categorie')
@@ -74,6 +77,11 @@ class rechercheController extends Controller
         ->where('ouvrir.id_horaire',$idH)
       	->get();
 
-        return view('resultats', array("restaurants"=>$restaurants, "categories"=>$categories, "horaires"=>$horaires));
+        if (count($restaurants)) {
+          return view('resultats', array("restaurants"=>$restaurants, "categories"=>$categories, "horaires"=>$horaires));
+        }
+        else {
+          return view('no-resultat');
+        }
     }
 }
